@@ -1,4 +1,5 @@
 import React from "react";
+import { showFormattedDate } from "../utils/index";
 
 class NoteInput extends React.Component {
     constructor(props) {
@@ -6,6 +7,8 @@ class NoteInput extends React.Component {
         this.state = {
             title: '',
             body: '',
+            archieve: false,
+            createdAt: showFormattedDate,
         }
 
         this.onTitleChangeHandler = this.onTitleChangeHandler.bind(this);

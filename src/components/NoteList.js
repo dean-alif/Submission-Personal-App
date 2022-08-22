@@ -1,7 +1,7 @@
 import React from "react";
 import NoteItem from "./NoteItem";
 
-function NoteList({ notes, onDelete }) {
+function NoteList({ id, notes, onDelete }) {
     return (
         <div className="notes-list">
             {notes.map((note) => {

@@ -1,13 +1,17 @@
 import React from "react";
 import NoteItem from "./NoteItem";
 
-function NoteList({ id, notes, onDelete }) {
+function NoteList({ notes, onDelete }) {
     return (
-        <div className="notes-list">
-            {notes.map((note) => {
-                return <NoteItem key={note.id} onDelete={onDelete} {...note} />;
-            })}
-        </div>
+        <>
+            {notes.length > 0 ? (
+                <div className="notes-list">
+                {notes?.map((note) => (
+                    <NoteItem key={note.id} onDelete={onDelete} {...note} />
+                ))}
+                </div>
+                ) : <div className="notes-list"><p className="notes-list__empty-message">Tidak ada catatan</p></div>}
+        </>
     );
 }
 

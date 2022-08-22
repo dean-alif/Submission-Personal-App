@@ -1,6 +1,6 @@
 import React from "react";
 
-function NoteAppHeader({ id, title, body, createdAt }) {
+function NoteAppHeader() {
     return (
         <div className="note-app__header">
             <h1>Notes</h1>

@@ -7,7 +7,7 @@ class NoteApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            notes: getInitialData,
+            notes: getInitialData(),
         }
 
         this.onDeleteHandler = this.onDeleteHandler.bind(this);
@@ -39,7 +39,7 @@ class NoteApp extends React.Component {
         return (
             <div className="note-app">
                 <NoteAppHeader />
-                <NoteAppBody />
+                <NoteAppBody notes={this.state.notes} onDelete={this.onDelete}/>
             </div>
         );
     }
